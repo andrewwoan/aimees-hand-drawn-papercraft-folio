@@ -25,6 +25,7 @@ const Experience = () => {
     >
       <Scene />
       <OrbitControls />
+      <color attach="background" args={["#111111"]} />
     </Canvas>
   );
 };
