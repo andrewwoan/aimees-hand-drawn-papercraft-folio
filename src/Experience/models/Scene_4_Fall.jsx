@@ -11,9 +11,9 @@ import { useGLTF } from "@react-three/drei";
 export default function Model(props) {
   const { nodes, materials } = useGLTF("/models/Scene_4_Fall-transformed.glb");
 
-  const texture_1 = useKTX2Texture("/textures/Scene_4_Fall_1.ktx2");
-  const texture_2 = useKTX2Texture("/textures/Scene_4_Fall_2.ktx2");
-  const texture_3 = useKTX2Texture("/textures/Scene_4_Fall_3.ktx2");
+  const texture_1 = useKTX2Texture("/textures/Scene_4_Fall_1.webp");
+  const texture_2 = useKTX2Texture("/textures/Scene_4_Fall_2.webp");
+  const texture_3 = useKTX2Texture("/textures/Scene_4_Fall_3.webp");
 
   return (
     <group {...props} dispose={null}>

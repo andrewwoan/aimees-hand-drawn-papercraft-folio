@@ -13,7 +13,7 @@ export default function Model(props) {
     "/models/Moving_Characters-transformed.glb",
   );
 
-  const texture_1 = useKTX2Texture("/textures/Moving_Characters_1.ktx2");
+  const texture_1 = useKTX2Texture("/textures/Moving_Characters_1.webp");
 
   return (
     <group {...props} dispose={null}>

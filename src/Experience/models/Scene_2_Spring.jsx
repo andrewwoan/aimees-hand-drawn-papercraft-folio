@@ -13,10 +13,10 @@ export default function Model(props) {
     "/models/Scene_2_Spring-transformed.glb",
   );
 
-  const texture_1 = useKTX2Texture("/textures/Scene_2_Spring_1.ktx2");
-  const texture_2 = useKTX2Texture("/textures/Scene_2_Spring_2.ktx2");
-  const texture_3 = useKTX2Texture("/textures/Scene_2_Spring_3.ktx2");
-  const texture_4 = useKTX2Texture("/textures/Scene_2_Spring_4.ktx2");
+  const texture_1 = useKTX2Texture("/textures/Scene_2_Spring_1.webp");
+  const texture_2 = useKTX2Texture("/textures/Scene_2_Spring_2.webp");
+  const texture_3 = useKTX2Texture("/textures/Scene_2_Spring_3.webp");
+  const texture_4 = useKTX2Texture("/textures/Scene_2_Spring_4.webp");
 
   return (
     <group {...props} dispose={null}>

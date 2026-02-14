@@ -50,7 +50,7 @@ files.forEach((file) => {
     const textureHooks = [];
     for (let i = 1; i <= 4; i++) {
       textureHooks.push(
-        `  const texture_${i} = useKTX2Texture("${TEXTURE_PATH_PREFIX}${fileNameNoExt}_${i}.ktx2");`,
+        `  const texture_${i} = useTexture("${TEXTURE_PATH_PREFIX}${fileNameNoExt}_${i}.webp");`,
       );
     }
 
@@ -60,7 +60,7 @@ files.forEach((file) => {
         !importsAdded &&
         (line.includes("import React") || line.includes("import {"))
       ) {
-        newLines.push(`import { useKTX2Texture } from "${UTILS_IMPORT_PATH}";`);
+        newLines.push(`import { useTexture } from "${UTILS_IMPORT_PATH}";`);
         importsAdded = true;
       }
 
