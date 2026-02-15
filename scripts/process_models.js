@@ -32,7 +32,7 @@ files.forEach((file) => {
 
   try {
     console.log(`\n📦 Processing: ${file}`);
-    execSync(`npx gltfjsx "${inputFile}" -T -j -M`, { stdio: "inherit" });
+    execSync(`npx gltfjsx "${inputFile}" -j -M`, { stdio: "inherit" });
 
     if (fs.existsSync(tempGlbFile)) {
       fs.renameSync(tempGlbFile, finalGlbPath);
