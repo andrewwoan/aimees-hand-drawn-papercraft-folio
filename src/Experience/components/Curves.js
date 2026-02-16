@@ -31,7 +31,7 @@ export const exportedCurves = [
     ],
   },
   {
-    name: "MovingCharactersCurve",
+    name: "movingCharactersCurve",
     closed: true,
     points: [
       new THREE.Vector3(-0.035392, 0.279338, -10.894051),
@@ -53,7 +53,7 @@ export const exportedCurves = [
     ],
   },
   {
-    name: "CameraLookAtCurve",
+    name: "cameraLookAtCurve",
     closed: true,
     points: [
       new THREE.Vector3(2.750525, 1.97667, -9.114526),

@@ -15,26 +15,33 @@ const CustomCamera = () => {
   );
 
   useGSAP(() => {
-    gsap.to(scrollProgress.current, {
-      progress: 1,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "#dummy-scroll-div",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
+    ScrollTrigger.create({
+      trigger: "#dummy-scroll-div",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+      onUpdate: (self) => {
+        setScrollProgress(self.progress);
       },
     });
   }, []);
 
   useFrame(() => {
-    const scrollProgressPosition = scrollProgress.current.progress;
+    const scrollProgressPosition =
+      useCurveProgressStore.getState().scrollProgress;
+
+    const offsetScrollCameraPosition = (scrollProgressPosition + 0.5) % 1;
 
     const cameraCurvePosition = curves.cameraPathCurve.getPointAt(
+      offsetScrollCameraPosition,
+    );
+
+    const cameraLookAtCurvePosition = curves.cameraLookAtCurve.getPointAt(
       scrollProgressPosition,
     );
 
     camera.position.copy(cameraCurvePosition);
+    camera.lookAt(cameraLookAtCurvePosition);
   });
 
   return <></>;
