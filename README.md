@@ -1,16 +1,19 @@
-# React + Vite
+# 😊 Aimee Wei's Papercraft Portfolio 🐼
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**[Live site]()** | **[Article]()** | **[Tutorial]()**
 
-Currently, two official plugins are available:
+This repo contains code of Aimee's Papercraft Portfolio for a Codrops article and YouTube tutorial!! Name and details are anonymoized for privacy It's a portfolio website created with [Blender](https://www.blender.org/), [Three.js](https://threejs.org/), and [Krita](https://krita.org/en/). UI inspired by [Xianyao Wei's design](https://github.com/wehwayne2/lucys-bedroom-interface).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Page screenshot](public/media/og-image.webp?raw=true "Page Screenshot")
 
-## React Compiler
+# Credits!!! 💖
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Paper Material](https://superhivemarket.com/products/crafty-asset-pack)
 
-## Expanding the ESLint configuration
+# Extra info
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-
+
+# Areas of improvement / things to do
+
+-
