@@ -1,4 +1,4 @@
-# 😊 Aimee Wei's Papercraft Portfolio 🐼
+# 📄 Aimee Wei's Papercraft Portfolio ✂️
 
 **[Live site]()** | **[Article]()** | **[Tutorial]()**
 
