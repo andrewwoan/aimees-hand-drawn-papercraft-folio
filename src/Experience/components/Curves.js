@@ -4,7 +4,7 @@ export const exportedCurves = [
   {
     name: "cameraPathCurve",
     closed: true,
-    startIndex: 12, // <-- Manually edit this index to shift the start point
+    startIndex: 9, // <-- Manually edit this index to shift the start point
     points: [
       new THREE.Vector3(4.775683, 1.671652, -8.477468),
       new THREE.Vector3(7.458879, 1.671652, -8.623516),
@@ -15,7 +15,7 @@ export const exportedCurves = [
       new THREE.Vector3(9.938103, 2.147269, 5.471571),
       new THREE.Vector3(7.41201, 2.622885, 7.877319),
       new THREE.Vector3(4.331401, 4.76316, 10.934382),
-      new THREE.Vector3(1.313227, 3.811927, 11.062279),
+      new THREE.Vector3(-0.28077, 3.811926, 11.257782),
       new THREE.Vector3(-4.131282, 1.671652, 10.315402),
       new THREE.Vector3(-2.237507, 1.671652, 5.945935),
       new THREE.Vector3(-4.701258, 1.671652, 4.905354),
@@ -32,9 +32,9 @@ export const exportedCurves = [
   {
     name: "movingCharactersCurve",
     closed: true,
-    startIndex: 2, // <-- Manually edit this index to shift the start point
+    startIndex: 0, // <-- Manually edit this index to shift the start point
     points: [
-      new THREE.Vector3(-0.035392, 0.279338, -10.894051),
+      new THREE.Vector3(0.193001, 0.279338, -10.894051),
       new THREE.Vector3(4.308577, 0.279338, -10.029983),
       new THREE.Vector3(7.991215, 0.279338, -7.569322),
       new THREE.Vector3(10.451875, 0.279338, -3.886684),
@@ -55,10 +55,10 @@ export const exportedCurves = [
   {
     name: "cameraLookAtCurve",
     closed: true,
-    startIndex: 1, // <-- Manually edit this index to shift the start point
+    startIndex: 0, // <-- Manually edit this index to shift the start point
     points: [
-      new THREE.Vector3(2.776111, 1.97667, -9.089117),
-      new THREE.Vector3(6.857717, 1.97667, -6.779336),
+      new THREE.Vector3(1.236093, 1.97667, -9.843634),
+      new THREE.Vector3(5.553666, 1.97667, -8.021669),
       new THREE.Vector3(8.702841, 1.97667, -4.341067),
       new THREE.Vector3(9.873931, 1.97667, -0.631838),
       new THREE.Vector3(9.536418, 2.527152, 3.243201),
@@ -72,7 +72,7 @@ export const exportedCurves = [
       new THREE.Vector3(-9.607202, 1.97667, -2.328633),
       new THREE.Vector3(-7.812466, 1.97667, -5.77954),
       new THREE.Vector3(-4.833743, 1.17737, -8.280949),
-      new THREE.Vector3(-1.124514, 1.97667, -9.452038),
+      new THREE.Vector3(-1.767009, 1.97667, -9.719362),
     ],
   },
 ];

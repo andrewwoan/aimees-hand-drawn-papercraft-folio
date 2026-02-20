@@ -49,6 +49,26 @@ export default function Model(props) {
     fall: { start: 0.65, end: 0.85 },
   };
 
+  useEffect(() => {
+    if (!curves?.movingCharactersCurve) return;
+
+    const refsAndOffsets = [
+      [winterFrontCharacterRef, offsets.winterFrontCharacterRef],
+      [winterSideCharacterRef, offsets.winterSideCharacterRef],
+      [springFrontCharacterRef, offsets.springFrontCharacterRef],
+      [springSideCharacterRef, offsets.springSideCharacterRef],
+      [summerFrontCharacterRef, offsets.summerFrontCharacterRef],
+      [summerWaveRef, offsets.summerWaveRef],
+      [fallFrontCharacterRef, offsets.fallFrontCharacterRef],
+    ];
+
+    refsAndOffsets.forEach(([ref, offset]) => {
+      if (!ref.current) return;
+      curves.movingCharactersCurve.getPointAt(offset, targetPosition.current);
+      ref.current.position.copy(targetPosition.current);
+    });
+  }, [curves]);
+
   const moveObjectOrCharacter = (ref, offset, range) => {
     if (!ref.current) return;
 
