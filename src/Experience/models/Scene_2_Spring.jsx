@@ -5,13 +5,17 @@ Files: raw_assets\Scene_2_Spring.glb [1.71MB] > C:\Users\andre\My Stuff\VS Code 
 */
 
 import { useKTX2Texture } from "../utils/ktxLoader";
-import React from "react";
+import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { AnimateMesh } from "../components/AnimateMesh";
+import { useFrame } from "@react-three/fiber";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF(
     "/models/Scene_2_Spring-transformed.glb",
   );
+
+  const foxHeadRef = useRef();
 
   const texture_1 = useKTX2Texture("/textures/Scene_2_Spring_1.webp");
   const texture_2 = useKTX2Texture("/textures/Scene_2_Spring_2.webp", {
@@ -20,6 +24,12 @@ export default function Model(props) {
   const texture_3 = useKTX2Texture("/textures/Scene_2_Spring_3.webp");
   const texture_4 = useKTX2Texture("/textures/Scene_2_Spring_4.webp");
 
+  useFrame((state) => {
+    if (!foxHeadRef) return;
+    const time = state.clock.elapsedTime;
+
+    foxHeadRef.current.rotation.z = Math.sin(time * 0.8);
+  });
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -40,12 +50,15 @@ export default function Model(props) {
         position={[7.862, 1.103, 10.914]}
         rotation={[0, -0.994, Math.PI / 2]}
       />
+
       <mesh
+        ref={foxHeadRef}
         geometry={nodes.Scene_2_Spring_2_Fox_Head.geometry}
         material={texture_2}
         position={[10.082, 0.533, 8.884]}
         rotation={[-0.795, -0.369, -1.924]}
       />
+
       <mesh
         geometry={nodes.Scene_2_Spring_3_Baked.geometry}
         material={texture_3}

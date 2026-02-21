@@ -20,7 +20,6 @@ const Experience = () => {
   const setScrollProgress = useCurveProgressStore(
     (state) => state.setScrollProgress,
   );
-  // const lenisRef = useRef();
 
   const [lenis, setLenis] = useState(null);
 

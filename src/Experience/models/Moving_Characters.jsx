@@ -135,7 +135,6 @@ export default function Model(props) {
 
   useFrame(() => {
     const scrollProgress = useCurveProgressStore.getState().scrollProgress;
-    console.log(scrollProgress);
 
     moveObjectOrCharacter(
       winterFrontCharacterRef,

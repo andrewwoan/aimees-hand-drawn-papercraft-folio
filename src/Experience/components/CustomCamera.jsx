@@ -25,8 +25,6 @@ const CustomCamera = () => {
       useCurveProgressStore.getState().scrollProgress;
     // const offsetScrollCameraPosition = (scrollProgressPosition + 0.5) % 1;
 
-    console.log(scrollProgressPosition);
-
     curves.cameraPathCurve.getPointAt(
       scrollProgressPosition,
       targetPosition.current,
