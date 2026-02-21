@@ -11,6 +11,7 @@ import { useCurveProgressStore } from "../../store/useCurveProgressStore";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import gsap from "gsap";
+import { AnimateMesh } from "../components/AnimateMesh";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF(
@@ -193,167 +194,278 @@ export default function Model(props) {
     <group {...props} dispose={null}>
       <group ref={winterFrontCharacterRef}>
         <group ref={winterFrontCharacterInnerWrapperRef} position={[0, -5, 0]}>
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_arm_left_front.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_arm_left_front.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_arm_right_front.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_arm_right_front.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_front_character.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_front_character.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_Front_Smile.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_Front_Smile.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_front_smile_face.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_front_smile_face.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_happy_face.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_happy_face.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_head_front.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_head_front.position}
-          />
+          <AnimateMesh
+            position={[0, 0, 0]}
+            animations={[
+              { property: "rotation", axis: "y", speed: 1, amplitude: 0.3 },
+              {
+                property: "position",
+                axis: "y",
+                speed: 2,
+                amplitude: 0.05,
+                base: 0.23,
+              },
+            ]}
+          >
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_arm_left_front.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_arm_left_front.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_arm_right_front.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_arm_right_front.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_front_character.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_front_character.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_Front_Smile.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_Front_Smile.position}
+            />
+            <mesh
+              geometry={
+                nodes.Moving_Characters_Winter_front_smile_face.geometry
+              }
+              material={texture_1}
+              position={
+                nodes.Moving_Characters_Winter_front_smile_face.position
+              }
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_happy_face.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_happy_face.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_head_front.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_head_front.position}
+            />
+          </AnimateMesh>
         </group>
       </group>
 
       <group ref={winterSideCharacterRef}>
         <group ref={winterSideCharacterInnerWrapperRef} position={[0, -5, 0]}>
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_left_arm.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_left_arm.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_right_arm.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_right_arm.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_left_foot.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_left_foot.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_right_foot.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_right_foot.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Winter_side.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Winter_side.position}
-          />
+          <AnimateMesh
+            position={[0, 0, 0]}
+            animations={[
+              { property: "rotation", axis: "y", speed: 1, amplitude: 0.3 },
+              {
+                property: "position",
+                axis: "y",
+                speed: 2,
+                amplitude: 0.05,
+                base: 0.23,
+              },
+            ]}
+          >
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_left_arm.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_left_arm.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_right_arm.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_right_arm.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_left_foot.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_left_foot.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_right_foot.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_right_foot.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Winter_side.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Winter_side.position}
+            />
+          </AnimateMesh>
         </group>
       </group>
 
       <group ref={springFrontCharacterRef}>
-        <group ref={springFrontCharacterInnerWrapperRef} position={[0, -5, 0]}>
-          <mesh
-            geometry={nodes.Moving_Characters_Spring_front.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Spring_front.position}
-          />
-        </group>
+        <AnimateMesh
+          position={[0, 0, 0]}
+          animations={[
+            { property: "rotation", axis: "y", speed: 1, amplitude: 0.3 },
+            {
+              property: "position",
+              axis: "y",
+              speed: 2,
+              amplitude: 0.05,
+              base: 0.23,
+            },
+          ]}
+        >
+          <group
+            ref={springFrontCharacterInnerWrapperRef}
+            position={[0, -5, 0]}
+          >
+            <mesh
+              geometry={nodes.Moving_Characters_Spring_front.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Spring_front.position}
+            />
+          </group>
+        </AnimateMesh>
       </group>
 
       <group ref={springSideCharacterRef}>
         <group ref={springSideCharacterInnerWrapperRef} position={[0, -5, 0]}>
-          <mesh
-            geometry={nodes.Moving_Characters_Spring_side.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Spring_side.position}
-            rotation={nodes.Moving_Characters_Spring_side.rotation}
-            scale={nodes.Moving_Characters_Spring_side.scale}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Spring_side_back_wheel.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Spring_side_back_wheel.position}
-            rotation={nodes.Moving_Characters_Spring_side_back_wheel.rotation}
-            scale={nodes.Moving_Characters_Spring_side_back_wheel.scale}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Spring_side_front_wheel.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Spring_side_front_wheel.position}
-            rotation={nodes.Moving_Characters_Spring_side_front_wheel.rotation}
-            scale={nodes.Moving_Characters_Spring_side_front_wheel.scale}
-          />
+          <AnimateMesh
+            position={[0, 0, 0]}
+            animations={[
+              { property: "rotation", axis: "y", speed: 1, amplitude: 0.3 },
+              {
+                property: "position",
+                axis: "y",
+                speed: 2,
+                amplitude: 0.05,
+                base: 0.23,
+              },
+            ]}
+          >
+            <mesh
+              geometry={nodes.Moving_Characters_Spring_side.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Spring_side.position}
+              rotation={nodes.Moving_Characters_Spring_side.rotation}
+              scale={nodes.Moving_Characters_Spring_side.scale}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Spring_side_back_wheel.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Spring_side_back_wheel.position}
+              rotation={nodes.Moving_Characters_Spring_side_back_wheel.rotation}
+              scale={nodes.Moving_Characters_Spring_side_back_wheel.scale}
+            />
+            <mesh
+              geometry={
+                nodes.Moving_Characters_Spring_side_front_wheel.geometry
+              }
+              material={texture_1}
+              position={
+                nodes.Moving_Characters_Spring_side_front_wheel.position
+              }
+              rotation={
+                nodes.Moving_Characters_Spring_side_front_wheel.rotation
+              }
+              scale={nodes.Moving_Characters_Spring_side_front_wheel.scale}
+            />
+          </AnimateMesh>
         </group>
       </group>
 
       <group ref={fallFrontCharacterRef}>
         <group ref={fallFrontCharacterInnerWrapperRef} position={[0, -5, 0]}>
-          <mesh
-            geometry={nodes.Moving_Characters_Fall_character.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Fall_character.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Fall_face.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Fall_face.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Fall_left_arm.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Fall_left_arm.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Fall_right_arm.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Fall_right_arm.position}
-          />
+          <AnimateMesh
+            position={[0, 0, 0]}
+            animations={[
+              { property: "rotation", axis: "y", speed: 1, amplitude: 0.3 },
+              {
+                property: "position",
+                axis: "y",
+                speed: 2,
+                amplitude: 0.05,
+                base: 0.23,
+              },
+            ]}
+          >
+            <mesh
+              geometry={nodes.Moving_Characters_Fall_character.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Fall_character.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Fall_face.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Fall_face.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Fall_left_arm.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Fall_left_arm.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Fall_right_arm.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Fall_right_arm.position}
+            />
+          </AnimateMesh>
         </group>
       </group>
 
       <group ref={summerWaveRef}>
         <group ref={summerWaveInnerWrapperRef} position={[0, -5, 0]}>
-          <mesh
-            geometry={nodes.Moving_Characters_Summer_character_Wave.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Summer_character_Wave.position}
-          />
+          <AnimateMesh
+            position={[0, 0, 0]}
+            animations={[
+              { property: "rotation", axis: "y", speed: 1, amplitude: 0.3 },
+              {
+                property: "position",
+                axis: "y",
+                speed: 2,
+                amplitude: 0.05,
+                base: 0.23,
+              },
+            ]}
+          >
+            <mesh
+              geometry={nodes.Moving_Characters_Summer_character_Wave.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Summer_character_Wave.position}
+            />
+          </AnimateMesh>
         </group>
       </group>
 
       <group ref={summerFrontCharacterRef}>
         <group ref={summerFrontCharacterInnerWrapperRef} position={[0, -5, 0]}>
-          <mesh
-            geometry={nodes.Moving_Characters_Summer_character.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Summer_character.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Summer_happy_face.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Summer_happy_face.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Summer_left_arm.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Summer_left_arm.position}
-          />
-          <mesh
-            geometry={nodes.Moving_Characters_Summer_right_arm.geometry}
-            material={texture_1}
-            position={nodes.Moving_Characters_Summer_right_arm.position}
-          />
+          <AnimateMesh
+            position={[0, 0, 0]}
+            animations={[
+              { property: "rotation", axis: "y", speed: 1, amplitude: 0.3 },
+              {
+                property: "position",
+                axis: "y",
+                speed: 2,
+                amplitude: 0.05,
+                base: 0.23,
+              },
+            ]}
+          >
+            <mesh
+              geometry={nodes.Moving_Characters_Summer_character.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Summer_character.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Summer_happy_face.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Summer_happy_face.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Summer_left_arm.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Summer_left_arm.position}
+            />
+            <mesh
+              geometry={nodes.Moving_Characters_Summer_right_arm.geometry}
+              material={texture_1}
+              position={nodes.Moving_Characters_Summer_right_arm.position}
+            />
+          </AnimateMesh>
         </group>
       </group>
     </group>

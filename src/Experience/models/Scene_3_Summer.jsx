@@ -5,8 +5,9 @@ Files: raw_assets\Scene_3_Summer.glb [4.09MB] > C:\Users\andre\My Stuff\VS Code 
 */
 
 import { useKTX2Texture } from "../utils/ktxLoader";
-import React from "react";
+import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import gsap from "gsap";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF(
@@ -18,6 +19,44 @@ export default function Model(props) {
   const texture_3 = useKTX2Texture("/textures/Scene_3_Summer_3.webp");
   const texture_4 = useKTX2Texture("/textures/Scene_3_Summer_4.webp");
 
+  const starbucksSignRef = useRef();
+  const blenderSignRef = useRef();
+  const figmaSignRef = useRef();
+  const psychiatristSignRef = useRef();
+
+  const FLOAT_AMOUNT = 3;
+  const DURATION = 0.4;
+
+  const createHoverHandlers = (signRef, baseY) => ({
+    onPointerEnter: (e) => {
+      e.stopPropagation();
+      document.body.style.cursor = "pointer";
+      gsap.to(signRef.current.position, {
+        y: baseY + FLOAT_AMOUNT,
+        duration: DURATION,
+        ease: "power2.out",
+      });
+    },
+    onPointerLeave: (e) => {
+      e.stopPropagation();
+      document.body.style.cursor = "auto";
+      gsap.to(signRef.current.position, {
+        y: baseY,
+        duration: DURATION,
+        ease: "power2.inOut",
+      });
+    },
+  });
+
+  const starbucksBaseY =
+    nodes.Scene_3_Summer_4_Starbucks_Sign_Summer_3_2.position.y - 2;
+  const blenderBaseY =
+    nodes.Scene_3_Summer_2_Blender_Sign_Summer_3_2.position.y - 2;
+  const figmaBaseY =
+    nodes.Scene_3_Summer_2_Figma_Sign_Summer_3_2.position.y - 2;
+  const psychiatristBaseY =
+    nodes.Scene_3_Summer_2_Psychiatrist_Sign_Summer_3_2.position.y - 2;
+
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -25,46 +64,74 @@ export default function Model(props) {
         material={texture_1}
         position={nodes.Scene_3_Summer_1.position}
       />
+
       <mesh
         geometry={nodes.Scene_3_Summer_Shanghai.geometry}
         material={texture_1}
         position={nodes.Scene_3_Summer_Shanghai.position}
+        {...createHoverHandlers(starbucksSignRef, starbucksBaseY)}
       />
+
       <mesh
         geometry={nodes.Scene_3_Summer_Austin.geometry}
         material={texture_1}
         position={nodes.Scene_3_Summer_Austin.position}
+        {...createHoverHandlers(blenderSignRef, blenderBaseY)}
       />
+
       <mesh
         geometry={nodes.Scene_3_Summer_1_Cali.geometry}
         material={texture_1}
         position={nodes.Scene_3_Summer_1_Cali.position}
+        {...createHoverHandlers(figmaSignRef, figmaBaseY)}
       />
+
       <mesh
         geometry={nodes.Scene_3_Summer_1_Boston.geometry}
         material={texture_1}
         position={nodes.Scene_3_Summer_1_Boston.position}
+        {...createHoverHandlers(psychiatristSignRef, psychiatristBaseY)}
       />
+
       <mesh
         geometry={nodes.Scene_3_Summer_2.geometry}
         material={texture_2}
         position={nodes.Scene_3_Summer_2.position}
       />
+
       <mesh
+        ref={figmaSignRef}
         geometry={nodes.Scene_3_Summer_2_Figma_Sign_Summer_3_2.geometry}
         material={texture_2}
-        position={nodes.Scene_3_Summer_2_Figma_Sign_Summer_3_2.position}
+        position={[
+          nodes.Scene_3_Summer_2_Figma_Sign_Summer_3_2.position.x,
+          figmaBaseY,
+          nodes.Scene_3_Summer_2_Figma_Sign_Summer_3_2.position.z,
+        ]}
       />
+
       <mesh
+        ref={psychiatristSignRef}
         geometry={nodes.Scene_3_Summer_2_Psychiatrist_Sign_Summer_3_2.geometry}
         material={texture_2}
-        position={nodes.Scene_3_Summer_2_Psychiatrist_Sign_Summer_3_2.position}
+        position={[
+          nodes.Scene_3_Summer_2_Psychiatrist_Sign_Summer_3_2.position.x,
+          psychiatristBaseY,
+          nodes.Scene_3_Summer_2_Psychiatrist_Sign_Summer_3_2.position.z,
+        ]}
       />
+
       <mesh
+        ref={blenderSignRef}
         geometry={nodes.Scene_3_Summer_2_Blender_Sign_Summer_3_2.geometry}
         material={texture_2}
-        position={nodes.Scene_3_Summer_2_Blender_Sign_Summer_3_2.position}
+        position={[
+          nodes.Scene_3_Summer_2_Blender_Sign_Summer_3_2.position.x,
+          blenderBaseY,
+          nodes.Scene_3_Summer_2_Blender_Sign_Summer_3_2.position.z,
+        ]}
       />
+
       <mesh
         geometry={nodes.Scene_3_Summer_2_seaweed.geometry}
         material={texture_2}
@@ -105,16 +172,24 @@ export default function Model(props) {
         material={texture_2}
         position={nodes.Scene_3_Summer_2001_seahorse.position}
       />
+
       <mesh
         geometry={nodes.Scene_3_Summer_3.geometry}
         material={texture_3}
         position={nodes.Scene_3_Summer_3.position}
       />
+
       <mesh
+        ref={starbucksSignRef}
         geometry={nodes.Scene_3_Summer_4_Starbucks_Sign_Summer_3_2.geometry}
         material={texture_4}
-        position={nodes.Scene_3_Summer_4_Starbucks_Sign_Summer_3_2.position}
+        position={[
+          nodes.Scene_3_Summer_4_Starbucks_Sign_Summer_3_2.position.x,
+          starbucksBaseY,
+          nodes.Scene_3_Summer_4_Starbucks_Sign_Summer_3_2.position.z,
+        ]}
       />
+
       <mesh
         geometry={nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2_Crab.geometry}
         material={texture_4}

@@ -51,11 +51,19 @@ export default function Model(props) {
         geometry={nodes.Scene_1_Winter_3_Bird_Tail.geometry}
         material={texture_3}
       />
-      <mesh
-        geometry={nodes.Scene_1_Winter_3_Deer_Head.geometry}
-        material={texture_3}
+
+      <AnimateMesh
         position={nodes.Scene_1_Winter_3_Deer_Head.position}
-      />
+        axis={"z"}
+        amplitude={0.2}
+        speed={1.5}
+      >
+        <mesh
+          geometry={nodes.Scene_1_Winter_3_Deer_Head.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
       <mesh
         geometry={nodes.Scene_1_Winter_3_Fire_Inner_Most.geometry}
         material={texture_3}
@@ -76,18 +84,26 @@ export default function Model(props) {
         geometry={nodes.Scene_1_Winter_3_Chat_Box_Scene_1_Winter_3.geometry}
         material={texture_3}
       />
-      <mesh
-        geometry={nodes.Scene_1_Winter_3_Note_1.geometry}
-        material={texture_3}
-      />
-      <mesh
-        geometry={nodes.Scene_1_Winter_3_Note_2.geometry}
-        material={texture_3}
-      />
-      <mesh
-        geometry={nodes.Scene_1_Winter_3_Note_3.geometry}
-        material={texture_3}
-      />
+      <AnimateMesh axis={"z"} amplitude={0.01}>
+        <mesh
+          geometry={nodes.Scene_1_Winter_3_Note_1.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh axis={"z"} amplitude={0.012} speed={0.95}>
+        <mesh
+          geometry={nodes.Scene_1_Winter_3_Note_2.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+      <AnimateMesh axis={"z"} offset={0.3} amplitude={0.011} speed={0.99}>
+        <mesh
+          geometry={nodes.Scene_1_Winter_3_Note_3.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
       <mesh
         geometry={nodes.Scene_1_Winter_3_Hello_Text.geometry}
         material={texture_3}

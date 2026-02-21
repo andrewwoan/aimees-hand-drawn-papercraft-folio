@@ -1,10 +1,11 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useFrame, useThree } from "@react-three/fiber";
-import React, { useMemo, useRef } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { useCurveProgressStore } from "../../store/useCurveProgressStore";
 import * as THREE from "three";
 import { PerspectiveCamera } from "@react-three/drei";
+import { useCameraStore } from "../../store/useCameraStore";
 
 const CustomCamera = () => {
   const { camera, pointer } = useThree();
@@ -19,6 +20,14 @@ const CustomCamera = () => {
 
   const cameraGroupRef = useRef();
   const cameraRef = useRef();
+
+  const zoom = useCameraStore((state) => state.zoom);
+
+  useEffect(() => {
+    if (cameraRef.current) {
+      cameraRef.current.updateProjectionMatrix();
+    }
+  }, [zoom]);
 
   useFrame(() => {
     const scrollProgressPosition =
@@ -68,7 +77,12 @@ const CustomCamera = () => {
   return (
     <>
       <group ref={cameraGroupRef}>
-        <PerspectiveCamera makeDefault fov={50} ref={cameraRef} zoom={1.1} />
+        <PerspectiveCamera
+          makeDefault
+          fov={50}
+          ref={cameraRef}
+          zoom={zoom}
+        />{" "}
       </group>
     </>
   );

@@ -7,6 +7,7 @@ Files: raw_assets\Spring.glb [1.47MB] > C:\Users\andre\My Stuff\VS Code Projects
 import { useKTX2Texture } from "../utils/ktxLoader";
 import React from "react";
 import { useGLTF } from "@react-three/drei";
+import { AnimateMesh } from "../components/AnimateMesh";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF(
@@ -35,31 +36,74 @@ export default function Model(props) {
         material={texture_2}
         position={nodes.Scene_2_Spring_2_Gate_Left.position}
       />
-      <mesh
-        geometry={nodes.Scene_2_Spring_2_Fox_Head.geometry}
-        material={texture_2}
+      <AnimateMesh
+        axis={"z"}
+        amplitude={0.2}
+        speed={2}
         position={nodes.Scene_2_Spring_2_Fox_Head.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_2_Baked_Slime.geometry}
-        material={texture_2}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_2_Fox_Head.geometry}
+          material={texture_2}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_2_Baked_Slime.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_2_Baked_Gnome.geometry}
-        material={texture_2}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_2_Baked_Slime.geometry}
+          material={texture_2}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_2_Baked_Gnome.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_2_Baked_Gnome002.geometry}
-        material={texture_2}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_2_Baked_Gnome.geometry}
+          material={texture_2}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_2_Baked_Gnome002.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_2_Baked_Gnome001.geometry}
-        material={texture_2}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_2_Baked_Gnome002.geometry}
+          material={texture_2}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_2_Baked_Gnome001.position}
-      />
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_2_Baked_Gnome001.geometry}
+          material={texture_2}
+        />
+      </AnimateMesh>
+
       <mesh
         geometry={nodes.Scene_2_Spring_2_Baked_Butterfly.geometry}
         material={texture_2}
@@ -80,66 +124,172 @@ export default function Model(props) {
         material={texture_3}
         position={nodes.Scene_2_Spring_3_Water_Inner.position}
       />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Duck.geometry}
-        material={texture_3}
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_3_Baked_Duck.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Frog.geometry}
-        material={texture_3}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Duck.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_3_Baked_Frog.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Grass.geometry}
-        material={texture_3}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Frog.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.2}
+        speed={2.2}
         position={nodes.Scene_2_Spring_3_Baked_Grass.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Grass001.geometry}
-        material={texture_3}
+        property={"scale"}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Grass.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.2}
+        speed={2.2}
         position={nodes.Scene_2_Spring_3_Baked_Grass001.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Grass002.geometry}
-        material={texture_3}
+        property={"scale"}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Grass001.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.2}
+        speed={2.2}
         position={nodes.Scene_2_Spring_3_Baked_Grass002.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Grass003.geometry}
-        material={texture_3}
+        property={"scale"}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Grass002.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.2}
+        speed={2.2}
         position={nodes.Scene_2_Spring_3_Baked_Grass003.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Flower.geometry}
-        material={texture_3}
+        property={"scale"}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Grass003.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_3_Baked_Flower.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked001.geometry}
-        material={texture_3}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Flower.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_3_Baked001.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Flower001.geometry}
-        material={texture_3}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked001.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_3_Baked_Flower001.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked002.geometry}
-        material={texture_3}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Flower001.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_3_Baked002.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Plant.geometry}
-        material={texture_3}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked002.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_3_Baked_Plant.position}
-      />
-      <mesh
-        geometry={nodes.Scene_2_Spring_3_Baked_Plant001.geometry}
-        material={texture_3}
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Plant.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
+      <AnimateMesh
+        axis={"y"}
+        amplitude={0.1}
+        speed={2}
+        property={"scale"}
         position={nodes.Scene_2_Spring_3_Baked_Plant001.position}
-      />
+        base={1.1}
+      >
+        <mesh
+          geometry={nodes.Scene_2_Spring_3_Baked_Plant001.geometry}
+          material={texture_3}
+        />
+      </AnimateMesh>
 
       <mesh
         geometry={nodes.Scene_2_Spring_3_Baked003.geometry}
