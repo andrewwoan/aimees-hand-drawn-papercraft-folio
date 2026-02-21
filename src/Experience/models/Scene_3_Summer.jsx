@@ -23,52 +23,134 @@ export default function Model(props) {
       <mesh
         geometry={nodes.Scene_3_Summer_1.geometry}
         material={texture_1}
-        position={[-12.913, 5.063, 3.973]}
-        rotation={[-1.886, -0.063, -1.359]}
+        position={nodes.Scene_3_Summer_1.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_Shanghai.geometry}
+        material={texture_1}
+        position={nodes.Scene_3_Summer_Shanghai.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_Austin.geometry}
+        material={texture_1}
+        position={nodes.Scene_3_Summer_Austin.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_1_Cali.geometry}
+        material={texture_1}
+        position={nodes.Scene_3_Summer_1_Cali.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_1_Boston.geometry}
+        material={texture_1}
+        position={nodes.Scene_3_Summer_1_Boston.position}
       />
       <mesh
         geometry={nodes.Scene_3_Summer_2.geometry}
         material={texture_2}
-        position={[-0.025, 1.688, 0.683]}
-        rotation={[0, -0.655, 0]}
+        position={nodes.Scene_3_Summer_2.position}
       />
       <mesh
         geometry={nodes.Scene_3_Summer_2_Figma_Sign_Summer_3_2.geometry}
         material={texture_2}
-        position={[-8.308, -0.316, 7.066]}
-        rotation={[0, -0.864, 0]}
+        position={nodes.Scene_3_Summer_2_Figma_Sign_Summer_3_2.position}
       />
       <mesh
         geometry={nodes.Scene_3_Summer_2_Psychiatrist_Sign_Summer_3_2.geometry}
         material={texture_2}
-        position={[-8.972, -1.152, 3.654]}
-        rotation={[0, -0.724, 0]}
+        position={nodes.Scene_3_Summer_2_Psychiatrist_Sign_Summer_3_2.position}
       />
       <mesh
         geometry={nodes.Scene_3_Summer_2_Blender_Sign_Summer_3_2.geometry}
         material={texture_2}
-        position={[-4.71, -0.647, 9.861]}
-        rotation={[0, -0.784, 0]}
+        position={nodes.Scene_3_Summer_2_Blender_Sign_Summer_3_2.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_2_seaweed.geometry}
+        material={texture_2}
+        position={nodes.Scene_3_Summer_2_seaweed.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_2001_seaweed.geometry}
+        material={texture_2}
+        position={nodes.Scene_3_Summer_2001_seaweed.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_2002_seaweed.geometry}
+        material={texture_2}
+        position={nodes.Scene_3_Summer_2002_seaweed.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_2003_seaweed.geometry}
+        material={texture_2}
+        position={nodes.Scene_3_Summer_2003_seaweed.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_2001_fish.geometry}
+        material={texture_2}
+        position={nodes.Scene_3_Summer_2001_fish.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_2001_fish_two.geometry}
+        material={texture_2}
+        position={nodes.Scene_3_Summer_2001_fish_two.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_2001_starfish.geometry}
+        material={texture_2}
+        position={nodes.Scene_3_Summer_2001_starfish.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_2001_seahorse.geometry}
+        material={texture_2}
+        position={nodes.Scene_3_Summer_2001_seahorse.position}
       />
       <mesh
         geometry={nodes.Scene_3_Summer_3.geometry}
         material={texture_3}
-        position={[-2.036, 8.657, 6.085]}
-        scale={0.191}
+        position={nodes.Scene_3_Summer_3.position}
       />
       <mesh
         geometry={nodes.Scene_3_Summer_4_Starbucks_Sign_Summer_3_2.geometry}
         material={texture_4}
-        position={[-2.001, -1.191, 9.985]}
-        rotation={[0, -0.256, 0]}
-        scale={[1, 1.75, 1]}
+        position={nodes.Scene_3_Summer_4_Starbucks_Sign_Summer_3_2.position}
+      />
+      <mesh
+        geometry={nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2_Crab.geometry}
+        material={texture_4}
+        position={nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2_Crab.position}
+      />
+      <mesh
+        geometry={
+          nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2_Dragonair.geometry
+        }
+        material={texture_4}
+        position={
+          nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2_Dragonair.position
+        }
+      />
+      <mesh
+        geometry={
+          nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2_Sand_Castle_Gate.geometry
+        }
+        material={texture_4}
+        position={
+          nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2_Sand_Castle_Gate.position
+        }
+      />
+      <mesh
+        geometry={
+          nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2001_umbrella.geometry
+        }
+        material={texture_4}
+        position={
+          nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2001_umbrella.position
+        }
       />
       <mesh
         geometry={nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2.geometry}
         material={texture_4}
-        position={[-2.359, -6.377, 8.422]}
-        rotation={[0, -0.439, 0]}
-        scale={[1, 1.75, 1]}
+        position={nodes.Scene_3_Summer_4_Bike_Sign_Summer_3_2.position}
       />
     </group>
   );

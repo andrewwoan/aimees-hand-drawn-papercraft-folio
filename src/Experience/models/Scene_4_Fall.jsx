@@ -20,56 +20,72 @@ export default function Model(props) {
       <mesh
         geometry={nodes.Scene_4_Fall_1_Baked.geometry}
         material={texture_1}
-        position={[-0.025, 0.731, 0.683]}
-        rotation={[0, -0.655, 0]}
+        position={nodes.Scene_4_Fall_1_Baked.position}
       />
       <mesh
         geometry={nodes.Scene_4_Fall_2_Baked.geometry}
         material={texture_2}
-        position={[-0.025, 0.731, 0.683]}
-        rotation={[0, -0.655, 0]}
+        position={nodes.Scene_4_Fall_2_Baked.position}
       />
       <mesh
         geometry={nodes.Scene_4_Fall_2_Left_Arm.geometry}
         material={texture_2}
-        position={[-4.24, -0.335, -8.168]}
-        rotation={[-0.206, -0.697, -0.14]}
+        position={nodes.Scene_4_Fall_2_Left_Arm.position}
       />
       <mesh
         geometry={nodes.Scene_4_Fall_2_Right_Arm.geometry}
         material={texture_2}
-        position={[-4.75, -0.325, -7.783]}
-        rotation={[0.086, -0.637, 0.057]}
+        position={nodes.Scene_4_Fall_2_Right_Arm.position}
       />
       <mesh
         geometry={nodes.Scene_4_Fall_2_Fire.geometry}
         material={texture_2}
-        position={[-4.773, -0.05, -7.765]}
-        rotation={[0, -0.655, 0]}
+        position={nodes.Scene_4_Fall_2_Fire.position}
+      />
+      <mesh
+        geometry={nodes.Scene_4_Fall_2_Baked_guoba.geometry}
+        material={texture_2}
+        position={nodes.Scene_4_Fall_2_Baked_guoba.position}
       />
       <mesh
         geometry={nodes.Scene_4_Fall_3_Baked.geometry}
         material={texture_3}
-        position={[-0.025, 0.739, 0.683]}
-        rotation={[0, -0.655, 0]}
+        position={nodes.Scene_4_Fall_3_Baked.position}
       />
       <mesh
         geometry={nodes.Scene_4_Fall_3_Cat_Head.geometry}
         material={texture_3}
-        position={[-4.15, 0.711, -11.922]}
-        rotation={[0, -0.655, 0]}
+        position={nodes.Scene_4_Fall_3_Cat_Head.position}
       />
       <mesh
-        geometry={nodes.Scene_4_Fall_3_Baked001.geometry}
+        geometry={nodes.Scene_4_Fall_3_Bakedbunnyhead001.geometry}
         material={texture_3}
-        position={[-7.457, 0.811, -10.109]}
-        rotation={[0, -0.655, 0]}
+        position={nodes.Scene_4_Fall_3_Bakedbunnyhead001.position}
+      />
+      <mesh
+        geometry={nodes.Scene_4_Fall_3_Bakedbunnyhead.geometry}
+        material={texture_3}
+        position={nodes.Scene_4_Fall_3_Bakedbunnyhead.position}
       />
       <mesh
         geometry={nodes.Scene_4_Fall_3_Baked002.geometry}
         material={texture_3}
-        position={[-10.349, 0.626, -7.59]}
-        rotation={[-0.412, -0.645, -0.251]}
+        position={nodes.Scene_4_Fall_3_Baked002.position}
+      />
+      <mesh
+        geometry={nodes.Scene_4_Fall_3_Baked003.geometry}
+        material={texture_3}
+        position={nodes.Scene_4_Fall_3_Baked003.position}
+      />
+      <mesh
+        geometry={nodes.Scene_4_Fall_3_Baked004.geometry}
+        material={texture_3}
+        position={nodes.Scene_4_Fall_3_Baked004.position}
+      />
+      <mesh
+        geometry={nodes.Scene_4_Fall_3_Baked_spider.geometry}
+        material={texture_3}
+        position={nodes.Scene_4_Fall_3_Baked_spider.position}
       />
     </group>
   );
